@@ -2,11 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Comments\Dtos\" />
+    <Folder Include="Models\Comments\Validators\" />
+    <Folder Include="Models\Posts\Dtos\" />
+    <Folder Include="Models\Posts\Validators\" />
+    <Folder Include="Models\Users\Dtos\" />
+    <Folder Include="Models\Users\Validators\" />
   </ItemGroup>
 </Project>
