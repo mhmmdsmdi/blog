@@ -18,4 +18,8 @@
     <Folder Include="Models\Users\Dtos\" />
     <Folder Include="Models\Users\Validators\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Common\Blog.Common.csproj" />
+  </ItemGroup>
 </Project>
