@@ -1,4 +1,6 @@
-﻿namespace Blog.Shared.Models.Users;
+﻿using Blog.Common.Entities;
+
+namespace Blog.Shared.Models.Users;
 
 public class User : Entity
 {

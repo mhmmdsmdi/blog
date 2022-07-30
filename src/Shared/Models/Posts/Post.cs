@@ -1,4 +1,5 @@
-﻿using Blog.Shared.Models.Users;
+﻿using Blog.Common.Entities;
+using Blog.Shared.Models.Users;
 
 namespace Blog.Shared.Models.Posts;
 

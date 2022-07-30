@@ -1,4 +1,5 @@
-﻿using Blog.Shared.Models.Posts;
+﻿using Blog.Common.Entities;
+using Blog.Shared.Models.Posts;
 using Blog.Shared.Models.Users;
 
 namespace Blog.Shared.Models.Comments;

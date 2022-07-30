@@ -5,30 +5,24 @@ namespace Blog.Service.Posts;
 
 public interface IPostService : IService
 {
-    Task<List<PostSelectDto>> GetPosts(CancellationToken cancellationToken);
+    Task<List<PostSelectDto>> GetPosts(int count, CancellationToken cancellationToken);
 }
 
 public class PostService : IPostService
 {
-    public Task<List<PostSelectDto>> GetPosts(CancellationToken cancellationToken)
+    public async Task<List<PostSelectDto>> GetPosts(int count,CancellationToken cancellationToken)
     {
-        return Task.FromResult(new List<PostSelectDto>()
+        var result = new List<PostSelectDto>();
+
+        for (int i = 0; i < count; i++)
         {
-            new()
+            result.Add(new()
             {
-                Title = "پست شماره 1",
-                Content = "محتوای پست",
-            },
-            new()
-            {
-                Title = "پست شماره 2",
-                Content = "محتوای پست",
-            },
-            new()
-            {
-                Title = "پست شماره 3",
-                Content = "محتوای پست",
-            },
-        });
+                Title = "پست شماره " + i,
+                Content = "اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب و گرافیک از این متن برای پرکردن صفحه و ارائه شکل کلی طرح استفاده می‌کنند.",
+            });
+        }
+
+        return result;
     }
 }

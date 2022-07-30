@@ -1,4 +1,4 @@
-﻿namespace Blog.Shared.Models;
+﻿namespace Blog.Common.Entities;
 
 public class Entity
 {
